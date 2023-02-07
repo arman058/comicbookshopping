@@ -1,0 +1,369 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* navbar section */
+#navbar{
+    display: grid;
+    grid-template-columns: 240px 877px auto;
+    position: relative;
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    background: black;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+}
+#navbar #logo{
+    margin: 5px 10px;
+}
+#navbar #logo img{
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    height: 75px;
+    /* border: 1px solid white; */
+}
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 20px;
+}
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 3px 38px;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 18px;
+}
+#navbar ul li a:hover{
+    color: rgb(64, 233, 191);
+    
+
+}
+#navbar #navsearch{
+    margin: 5px 10px;
+
+}
+#navbar #navsearch input{
+    display: block;
+    width: 200px;
+    padding: 6px 8px;
+    margin: 22px auto;
+    border: 2px solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 563px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background: rgba(0, 0, 0, 0.568);
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url(../Image/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.69;
+    top: 0px;
+    left: 0px;
+}
+#home h1{
+    font-size: 3rem;
+    color: white;
+}
+#home p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+#home .home-btn{
+    margin: 35px auto;
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    transform: translate(0);
+    overflow: hidden;
+
+    
+}
+#home .home-btn::before{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 8px;
+    top: 0px;
+    bottom: 0px;
+    left: -32px;
+    transform: rotate(-16deg);
+    filter: blur(6px);
+}
+#home .home-btn:hover::before{
+    left: calc(100% + 32px);
+    transition: 0.75s;
+}
+
+
+
+/* Comic Section */
+#comic{
+    display: grid;
+    grid-template-rows: 60px auto;
+    height: 649px;
+    background-color: black;
+    color: white;
+    position: relative;
+
+}
+#comic .h-primary{
+    text-align: center;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+
+}
+#comic #comic-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#comic #comic-container .comic-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(64, 233, 191);
+    margin: 20px;
+    border-radius: 12px;
+    height: 463px;
+}
+#comic #comic-container .comic-images:hover{
+    box-shadow: 0 0 4px 0 inset rgb(64, 233, 191),
+                0 0 10px 2px rgb(64, 233, 191);
+    
+}
+#comic #comic-container .comic-images .btn{
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    padding: 8px 25px;
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(64, 233, 191);
+}
+#comic #comic-container .comic-images .btn:hover{
+    color: rgb(64, 233, 191);
+    background: transparent;
+    box-shadow: 0 0 8px 0 inset rgb(64, 233, 191),
+                0 0 8px 2px rgb(64, 233, 191);
+                transition: all 0.7s ease-in-out;
+}
+
+
+
+
+
+#comic #comic-container .comic-images .h-secondary{
+    padding: 10px;
+    font-family: 'Baloo 2', cursive;
+}
+
+
+
+
+
+#comic #comic-container .comic-images img{
+     height: 250px;
+     width: 200px;
+     margin: 10px auto;
+}
+#comic #comic-container .comic-images p{
+    text-align: center;
+    padding: 10px;
+}
+#comic #more-comics{
+    margin: auto;
+    
+}
+#comic #more-comics .link-more-comics{
+    color: white;
+}
+#comic #more-comics .link-more-comics:hover{
+    color: red;
+}
+
+
+/* Characters Section */
+#characters{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+#characters::before{
+    content: "";
+    position: absolute;
+    background: black;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+#characters h1{
+    color: white;
+    font-weight: bold;
+}
+#characters ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 20px;
+}
+#characters ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+#characters ul li img{
+    height: 300px;
+    margin: 10px;
+    border-radius: 8px;
+}
+/* Footer Section */
+footer{
+    background-color: rgb(219, 218, 218);
+    height: 270px;
+}
+footer #footer-container{
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer #footer-container #footer1stpt{
+    width: 995px;
+    margin: 20px;
+}
+footer #footer-container #footer1stpt h1{
+    text-align: left;
+    padding-bottom: 6px;
+}
+footer #footer-container #footer1stpt .footer-p1 .footer-p-a-btn-1{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+footer #footer-container #footer1stpt .footer-p1 .footer-p-a-btn-1 img{
+    height: 35px;
+    margin: 3px;
+
+}
+footer #footer-container #footer1stpt .footer-p1 .footer-p-a-btn-1 span{
+    font-size: 18px;
+    font-family: 'Baloo 2', cursive;
+    
+    
+}
+footer #footer-container #footer1stpt .footer-p2{
+    font-family: 'Baloo 2', cursive;
+    font-weight: 300;
+    font-size: 1.4rem;
+    padding-top: 4px;
+}
+footer #footer-container #footer1stpt .footer-p2 .footer-p-2-a{
+    color: rgb(54, 54, 221);
+    text-decoration: none;
+}
+
+footer #footer-container #footerpt2{
+    margin: 20px;
+
+}
+footer #footer-container #footerpt2 ul li{
+    list-style: none;
+
+}
+footer #footer-container #footerpt2 ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(54, 54, 221);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 200;
+
+}
+footer #footer-container #footerpt2 ul li a:hover{
+    text-decoration: underline;
+
+}
+#footer .endfooter{
+    position: relative;
+    top: 10px;
+}
+
+
+
+
+
+/* Utility  classes */
+.h-primary{
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+.h-secondary{
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
